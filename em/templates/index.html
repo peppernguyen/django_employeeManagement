@@ -1,0 +1,30 @@
+{% extends "base_gen.html" %}
+
+{% block content %}
+
+    <h1>All Employees</h1>
+    <p>We've already had <strong>{{ num_employees }}</strong> employees</p>
+    {% if employee_list %}
+    <table>
+        <tr>
+            <th>Full Name</th>
+            <th>Gender</th>
+            <th>Date Of Birth</th>
+            <th>Position</th>
+        </tr>
+        {% for emp in employee_list %}
+            <tr>
+                <td><a href="{{ emp.get_absolute_url }}">{{ emp.name }}</a></td>
+                <td>{{emp.gender}}</td>
+                <td>{{ emp.dOB }}</td>
+                <td>{{ emp.position }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <button onClick="location.href='{% url 'emp_create' %}'">Add</button>
+
+    {% else %}
+        <p>What a shell coporation! There is no one in here...!?</p>
+    {% endif %}
+
+{% endblock %}

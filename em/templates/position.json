@@ -1,0 +1,44 @@
+[
+{
+  "model": "em.position",
+  "pk": 1,
+  "fields": {
+    "position": "CEO"
+  }
+},
+{
+  "model": "em.position",
+  "pk": 2,
+  "fields": {
+    "position": "DM"
+  }
+},
+{
+  "model": "em.position",
+  "pk": 3,
+  "fields": {
+    "position": "PM"
+  }
+},
+{
+  "model": "em.position",
+  "pk": 4,
+  "fields": {
+    "position": "Leader"
+  }
+},
+{
+  "model": "em.position",
+  "pk": 5,
+  "fields": {
+    "position": "Dev"
+  }
+},
+{
+  "model": "em.position",
+  "pk": 6,
+  "fields": {
+    "position": "Tester"
+  }
+}
+]

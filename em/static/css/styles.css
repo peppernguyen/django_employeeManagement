@@ -1,0 +1,30 @@
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+table{
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+td, th{
+    padding:10px 5px;
+    text-align: center;
+}
+
+
+#chart-container {
+      display: inline-block;
+      width: 50%;
+      margin-left: 10px;
+}
+
+
+button{
+    margin-top: 25px;
+}

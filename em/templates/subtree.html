@@ -1,0 +1,35 @@
+{% extends "base_gen.html" %}
+
+{% block content %}
+    <h1>Subtree of {{root.name}} - {{root.pos}}</h1>
+{#    <h2 id = demo></h2>#}
+    <ul id = "datasource">
+        <li><a href="{{ root.get_absolute_url }}"> {{ root.name }} </a> - {{ root.position }}
+            <ul>
+                {% for instance in instances %}
+                    <li><a href="{{ instance.get_absolute_url }}"> {{ instance.name }} </a> - {{ instance.position }}
+                        <ul>
+                            {% for i in instance.get_children %}
+                                <li><a href="{{ i.get_absolute_url }}"> {{ i.name }} </a> - {{ i.position }}
+                                    <ul>
+                                    {% for j in i.get_children %}
+                                        <li><a href="{{ j.get_absolute_url }}"> {{ j.name }} </a> - {{ j.position }}
+                                            <ul>
+                                            {% for k in j.get_children %}
+                                                <li><a href="{{ k.get_absolute_url }}"> {{ k.name }} </a> - {{ k.position }}</li>
+                                            {% endfor %}
+                                            </ul>
+                                        </li>
+                                    {% endfor %}
+                                    </ul>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+        </li>
+    </ul>
+  <div id="chart-container"></div>
+{% endblock %}
+{# filename: list.html #}
